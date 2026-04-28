@@ -2518,7 +2518,8 @@ Transform:
   m_LocalPosition: {x: 0.12, y: -0.035, z: -0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1251240488780816765}
   m_Father: {fileID: 5075153260507813609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5659505552586853533
@@ -3783,9 +3784,6 @@ MonoBehaviour:
   aimCamera: {fileID: 1363713689428062637}
   shootKey: 323
   weaponManager: {fileID: 5452479813705444891}
-  shootingLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
   interactDistance: 5
   interactLayer:
     serializedVersion: 2
