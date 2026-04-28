@@ -155,13 +155,5 @@ public abstract class monsterAI : MonoBehaviour, IDamage
             gameManager.instance.shopSystem.alphaKilled = true;
         }
     }
-
-    public virtual void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-        Debug.Log($"{gameObject.name} took {amount} damage.");
-
-        if (currentHealth <= 0) Die();
-
-    }
+    
 }

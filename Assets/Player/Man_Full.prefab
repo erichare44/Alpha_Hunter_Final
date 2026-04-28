@@ -2518,8 +2518,7 @@ Transform:
   m_LocalPosition: {x: 0.12, y: -0.035, z: -0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1251240488780816765}
+  m_Children: []
   m_Father: {fileID: 5075153260507813609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5659505552586853533
@@ -2598,7 +2597,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 15
-  m_Range: 25
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -3784,6 +3783,9 @@ MonoBehaviour:
   aimCamera: {fileID: 1363713689428062637}
   shootKey: 323
   weaponManager: {fileID: 5452479813705444891}
+  shootingLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   interactDistance: 5
   interactLayer:
     serializedVersion: 2

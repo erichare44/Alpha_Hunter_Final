@@ -18,7 +18,7 @@ MonoBehaviour:
   equippedPrefab: {fileID: 6179004576708658228, guid: 17f743c680ce95440b6864e0591c6b0a, type: 3}
   pickupPrefab: {fileID: 6179004576708658228, guid: 17f743c680ce95440b6864e0591c6b0a, type: 3}
   projectilePrefab: {fileID: 9036607570985550741, guid: 67ed2b719a2197e4286e628c514f1a19, type: 3}
-  damage: 10
+  damage: 50
   resellPrice: 25
   isAutomatic: 0
   fireRate: 2
