@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3380d812c50bef747a60de4940f59d2a
+timeCreated: 1516908569
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/1 lane/road 1 lane branch.prefab
+  uploadId: 307500

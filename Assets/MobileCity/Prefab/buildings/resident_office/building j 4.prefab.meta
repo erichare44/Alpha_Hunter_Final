@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d168f461bf1745498868fa538c77364
+timeCreated: 1519761560
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/resident_office/building j 4.prefab
+  uploadId: 307500

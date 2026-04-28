@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9ec841c8e60016347953f5cbc3ba59a6
+timeCreated: 1516908576
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/1 lane/road 1 lane corner in.prefab
+  uploadId: 307500

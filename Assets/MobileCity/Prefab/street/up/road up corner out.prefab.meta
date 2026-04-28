@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bf40e95852b17fe4d841467b777387b3
+timeCreated: 1519308572
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/up/road up corner out.prefab
+  uploadId: 307500

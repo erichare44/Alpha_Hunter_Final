@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c632558ab5afa44ebac5c1c2d3d90e3, type: 3}
+  m_Name: Beta_Wolf_Data
+  m_EditorClassIdentifier: Assembly-CSharp::monsterData
+  monsterName: Beta_Werewolf
+  health: 80
+  walkSpeed: 3
+  runSpeed: 15
+  sightRadius: 35
+  aggroRadius: 20
+  modelPrefab: {fileID: 7577556678749513712, guid: 30eaa1ffb5adec843b49407235fba733, type: 3}
+  ambientSound: {fileID: 8300000, guid: d58c8eadac484e84cb19756c6d636816, type: 3}
+  attackSound: {fileID: 8300000, guid: face63961b89f9b498b1a2cf2b4631aa, type: 3}
+  howlSound: {fileID: 8300000, guid: c15c0417d510633488d2e7ca8e31bce4, type: 3}
+  footstepClips:
+  - {fileID: 8300000, guid: 5d535922a35f67042af8dfc08793df27, type: 3}
+  - {fileID: 8300000, guid: 055d93adee175a64eac3c5598069fcd1, type: 3}
+  - {fileID: 8300000, guid: a9723ed04be799441899c478702620be, type: 3}
+  - {fileID: 8300000, guid: 324c5c351aec9bb4689b181b0352f273, type: 3}
+  - {fileID: 8300000, guid: 2744c36be5516b841a8aadba3258bd9d, type: 3}
+  - {fileID: 8300000, guid: 777c187b3778ed54bb6c7858f7a5cdb3, type: 3}
+  footstepVolume: 10
+  howlVolume: 0.5
+  attackDamage: 20
+  attackRange: 1.5
+  attackCooldown: 2
+  abilityCooldown: 0
+  abilityRange: 0
+  lifeStealPercent: 0
+  blinkCooldown: 3
+  pinDuration: 0
+  breakoutDifficulty: 0
+  staggerHealth: 50
+  armorValue: 0
+  weaknessMultiplier: 3
+  recoveryRate: 0
+  patienceMeter: 5

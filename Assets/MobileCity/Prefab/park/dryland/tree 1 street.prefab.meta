@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0e45319147ca64d47b1aaa36e8e1a9d7
+timeCreated: 1516313967
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/park/dryland/tree 1 street.prefab
+  uploadId: 307500

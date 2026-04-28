@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57a168a66636a9c46a7a3dfea496f2ea
+timeCreated: 1519928508
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles single/car 31 single.prefab
+  uploadId: 307500

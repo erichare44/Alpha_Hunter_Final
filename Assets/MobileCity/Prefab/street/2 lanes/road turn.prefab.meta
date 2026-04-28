@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6ceee4448e3f44438b414eb7a4d0dc7
+timeCreated: 1519660877
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/2 lanes/road turn.prefab
+  uploadId: 307500

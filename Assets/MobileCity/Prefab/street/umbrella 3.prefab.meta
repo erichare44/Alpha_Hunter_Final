@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5ef0d04e04c3429428699fbd86e0fe0b
+timeCreated: 1519907475
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/umbrella 3.prefab
+  uploadId: 307500

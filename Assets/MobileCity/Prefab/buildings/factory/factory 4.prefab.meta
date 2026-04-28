@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ab8837861a7c984ca5d81020c0954d0
+timeCreated: 1519866456
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/factory/factory 4.prefab
+  uploadId: 307500

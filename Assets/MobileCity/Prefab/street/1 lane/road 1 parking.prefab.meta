@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 293128706575d2649a7fa299ba5906e3
+timeCreated: 1519662450
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/1 lane/road 1 parking.prefab
+  uploadId: 307500

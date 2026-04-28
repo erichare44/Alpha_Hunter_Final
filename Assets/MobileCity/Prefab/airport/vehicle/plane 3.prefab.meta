@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6043a89d7f52fc54ea45ad0a424583dc
+timeCreated: 1525905892
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/airport/vehicle/plane 3.prefab
+  uploadId: 307500

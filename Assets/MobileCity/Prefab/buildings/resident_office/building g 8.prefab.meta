@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eabd5e2d4a63e4d4a8faa7fa695515a9
+timeCreated: 1519761512
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/resident_office/building g 8.prefab
+  uploadId: 307500

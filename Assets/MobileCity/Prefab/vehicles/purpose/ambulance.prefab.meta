@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7148b760c5c78e4eae082aaeb377b12
+timeCreated: 1517697915
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles/purpose/ambulance.prefab
+  uploadId: 307500

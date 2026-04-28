@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9262dd49ae6f49e4d8a95ffa249f0363, type: 3}
+  m_Name: 12 Guage
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponName: 12 Guage
+  weaponType: 0
+  weaponGripType: 0
+  equippedPrefab: {fileID: 7604466635745189720, guid: f2eaf5c4220d9774d868954a1c7936b1, type: 3}
+  pickupPrefab: {fileID: 7604466635745189720, guid: f2eaf5c4220d9774d868954a1c7936b1, type: 3}
+  projectilePrefab: {fileID: 9036607570985550741, guid: 67ed2b719a2197e4286e628c514f1a19, type: 3}
+  damage: 30
+  resellPrice: 95
+  isAutomatic: 0
+  fireRate: 0.25
+  projectileSpeed: 10
+  range: 30
+  magazineSize: 6
+  spread: 1
+  attackSpeed: 0
+  staminaCost: 0

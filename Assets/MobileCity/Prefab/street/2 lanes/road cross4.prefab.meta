@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ebc44f26e29e245428fdc9bd3b4dce7f
+timeCreated: 1519598423
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/2 lanes/road cross4.prefab
+  uploadId: 307500

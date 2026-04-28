@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7ec14fcbedc6c2048a45c0f7687b5d48
+timeCreated: 1516135513
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/2 lanes/road branch corner out 26 tris.prefab
+  uploadId: 307500

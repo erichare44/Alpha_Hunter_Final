@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1b8dd491eace96c4a8a1c662500785a0
+timeCreated: 1516132053
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/square asphalt 1x1.prefab
+  uploadId: 307500

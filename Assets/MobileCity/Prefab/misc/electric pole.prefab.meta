@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b48618f5141a0f4ba640aa8ebe5c241
+timeCreated: 1519924222
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/misc/electric pole.prefab
+  uploadId: 307500

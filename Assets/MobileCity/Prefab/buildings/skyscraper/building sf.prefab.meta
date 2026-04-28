@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ebd7424e62759e542b8be94131ce577d
+timeCreated: 1517786828
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/skyscraper/building sf.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e489e1f73f7abf443ad45e5b2289befc
+timeCreated: 1516140509
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/traffic light 306.prefab
+  uploadId: 307500

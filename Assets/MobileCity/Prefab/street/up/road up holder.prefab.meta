@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eaacb71a54fd7b149bf3b9f29d3233f1
+timeCreated: 1519254796
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/up/road up holder.prefab
+  uploadId: 307500

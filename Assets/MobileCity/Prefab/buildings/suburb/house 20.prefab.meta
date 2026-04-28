@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8647fa242a3edaa47b9d61460d3e0735
+timeCreated: 1526038503
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/suburb/house 20.prefab
+  uploadId: 307500

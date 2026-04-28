@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55e6097e4b475e04b9846c2d65cdfe1f
+timeCreated: 1516308372
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/park/dryland/bench 2.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1a4d3c8411c039d468b4104088cc59a6
+timeCreated: 1548276912
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles single/truck 10 single.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fe62763cd59e1604f9f58889f0ce293a
+timeCreated: 1517784747
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/police dept/police dept 338 tris.prefab
+  uploadId: 307500

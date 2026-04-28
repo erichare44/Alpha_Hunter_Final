@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 14dacd4f533d7d84a99dae11ee1af112
+timeCreated: 1519834766
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles single/car 12 single.prefab
+  uploadId: 307500

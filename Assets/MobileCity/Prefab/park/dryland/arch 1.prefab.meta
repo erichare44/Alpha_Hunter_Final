@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a525f9d5e3ff1d04d8b43b3404e7800c
+timeCreated: 1516661159
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/park/dryland/arch 1.prefab
+  uploadId: 307500

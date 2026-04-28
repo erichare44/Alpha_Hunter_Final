@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b9560882017bf442a8aebbc7346f33e
+timeCreated: 1519908602
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/road s.prefab
+  uploadId: 307500

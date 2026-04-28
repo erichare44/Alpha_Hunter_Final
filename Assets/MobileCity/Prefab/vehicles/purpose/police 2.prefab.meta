@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a15f4beffd004014ca4ef206d7f05d76
+timeCreated: 1548275645
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles/purpose/police 2.prefab
+  uploadId: 307500

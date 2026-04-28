@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 978242995384ab84da96bd94ad145316
+timeCreated: 1516308898
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/park/dryland/bin.prefab
+  uploadId: 307500

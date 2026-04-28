@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ef03ae049a03d844f92ac15cda5fd2bb
+timeCreated: 1517784745
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/police dept/police dept w sign 407
+    tris.prefab
+  uploadId: 307500

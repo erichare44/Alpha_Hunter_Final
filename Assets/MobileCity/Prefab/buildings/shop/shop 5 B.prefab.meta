@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 685da274dbb8f98488c90906d183828d
+timeCreated: 1516992837
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/shop/shop 5 B.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 90ecb6cbf151bd5478996513dbc1f0e5
+timeCreated: 1526036676
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/factory/factory hangar 1.prefab
+  uploadId: 307500

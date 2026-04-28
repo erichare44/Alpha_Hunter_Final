@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1c0e16688bc8eb4429acfb259d5d5d88
+timeCreated: 1516142658
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/hydrant.prefab
+  uploadId: 307500

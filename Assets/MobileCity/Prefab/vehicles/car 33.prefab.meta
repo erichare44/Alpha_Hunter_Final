@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fe676b69ab637c44b8301b7db8742549
+timeCreated: 1519928678
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles/car 33.prefab
+  uploadId: 307500

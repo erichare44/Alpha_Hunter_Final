@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f6340b189e0efa24e95706fe8a8a461a
+timeCreated: 1515962031
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/FreeCam.cs
+  uploadId: 307500

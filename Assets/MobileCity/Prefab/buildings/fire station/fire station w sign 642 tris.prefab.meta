@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d4daec330704f7f42b4b7c699e27a0e8
+timeCreated: 1517781874
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/fire station/fire station w sign
+    642 tris.prefab
+  uploadId: 307500

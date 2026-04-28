@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 875c336c08f0a94428a5ccba84261f9d
+timeCreated: 1519839079
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles single/bus 29 single.prefab
+  uploadId: 307500

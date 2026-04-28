@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a5fd26e8bd89c438077990e7090434, type: 3}
+  m_Name: Vampire_Group
+  m_EditorClassIdentifier: Assembly-CSharp::monsterGroup
+  groupName: Vampire
+  alphaPrefab: {fileID: 9142436045961875568, guid: 4885ba8c8d3aeff4d90c7bd0211a6f72, type: 3}
+  betaPrefab: {fileID: 1217984371826628817, guid: ff139a6c6ba451c4cb15c52394f6af20, type: 3}
+  stats: {fileID: 0}
+  groupAmbientSound: {fileID: 8300000, guid: 63657b1100bf13c4aadd45ea3b963bea, type: 3}
+  ambientVolume: 0.5

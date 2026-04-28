@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8fc6edb87dd816e4ea08d07f151bd133
+timeCreated: 1517784044
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/fire station/fire station 544 tris.prefab
+  uploadId: 307500

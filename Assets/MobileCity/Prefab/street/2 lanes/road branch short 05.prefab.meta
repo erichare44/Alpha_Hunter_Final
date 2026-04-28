@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 818da862f7444064c88e53037c0b6b98
+timeCreated: 1519659524
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/2 lanes/road branch short 05.prefab
+  uploadId: 307500

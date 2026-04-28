@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 32849ea95be572340af0b47390cf09fd
+timeCreated: 1519313956
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/bridge/road bridge tile.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b55fa224ba56f0946848bc1f47974fe3
+timeCreated: 1519927924
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/bus stop.prefab
+  uploadId: 307500

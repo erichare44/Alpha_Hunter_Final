@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58486fc090afe4f4694175fb4e7ba5d7
+timeCreated: 1516132033
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/2 lanes/road 1 side R.prefab
+  uploadId: 307500

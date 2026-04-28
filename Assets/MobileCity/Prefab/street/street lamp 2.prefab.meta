@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3ab5c664ac994d747a19aa90bbd09621
+timeCreated: 1516310439
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/street lamp 2.prefab
+  uploadId: 307500

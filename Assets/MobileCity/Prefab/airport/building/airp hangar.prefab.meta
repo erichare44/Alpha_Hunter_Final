@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c81fcf550e92e4f4a9edada87635fa65
+timeCreated: 1525987546
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/airport/building/airp hangar.prefab
+  uploadId: 307500

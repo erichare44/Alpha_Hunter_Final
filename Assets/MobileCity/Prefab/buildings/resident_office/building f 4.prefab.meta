@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 20d278bd248989149a0995b128504c0a
+timeCreated: 1519761501
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/resident_office/building f 4.prefab
+  uploadId: 307500

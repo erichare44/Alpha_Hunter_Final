@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d8abda8b4ee2245458dfe44e3b4aefe2
+timeCreated: 1517780435
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/shop/mall b.prefab
+  uploadId: 307500

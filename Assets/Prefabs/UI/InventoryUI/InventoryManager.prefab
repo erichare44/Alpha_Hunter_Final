@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3149982934800771422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000443231994989541}
+  - component: {fileID: 5776356972349419533}
+  - component: {fileID: 6591023241855518302}
+  - component: {fileID: 2368979387629698746}
+  - component: {fileID: 334687272616901681}
+  - component: {fileID: 4116282024498157318}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2000443231994989541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1092466, y: 0, z: -8.120148}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5776356972349419533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45a2860cbc368949bb046b000ac04f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  itemPrefabs:
+  - {fileID: 8679257579656847255, guid: 3a9f7ec63e2baca40b49cdf468f7a89d, type: 3}
+  - {fileID: 7430305272928601215, guid: b392caf743dee6f42961e94ac16c8225, type: 3}
+  - {fileID: 7610663549715275180, guid: d319adb485acc4c418da7b6bb05e1c02, type: 3}
+  - {fileID: 2239119506741607670, guid: bf20474b478728f438464d43f6bd3e93, type: 3}
+  - {fileID: 2945038134156968714, guid: 03bbd9f1e4ff3c542857e18a32a393d1, type: 3}
+  - {fileID: 2642849504070457300, guid: 7ede690594e938d469e29ea02bd1f2ea, type: 3}
+  - {fileID: 6179004576708658228, guid: 8abc3abf7a1d6e84d9926335037e3b1c, type: 3}
+  - {fileID: 4594876946990242612, guid: 0870f39cd316aa347a4dad24b024f4f5, type: 3}
+  - {fileID: 7604466635745189720, guid: 5c3d94da97ed3c04bb403103bedd81b1, type: 3}
+  - {fileID: 2612433298264619281, guid: 58ec459764c45df449525a7652d63bdc, type: 3}
+  - {fileID: 4262462957378739707, guid: 3854380eb05435f479029ecfefc85995, type: 3}
+  - {fileID: 6394038419812286147, guid: 3dca2742f9641d747935ad2e6848045d, type: 3}
+  - {fileID: 3450430223263354551, guid: 619d559251a4d8e419d720d03efe9041, type: 3}
+  - {fileID: 7945974936632922443, guid: 26a37f84e001c0940ac46eb154d0567d, type: 3}
+  savedItems: []
+  playerRows: 0
+  playerCols: 0
+  cellSize: 0
+  playerGridOrigin: {x: 0, y: 0, z: 0}
+  hubGridOrigin: {x: 0, y: 0, z: 0}
+  inventoryItemUIPrefab: {fileID: 0}
+  playerItemLayer: {fileID: 0}
+  hubItemLayer: {fileID: 0}
+  carItemLayer: {fileID: 0}
+  playerGridSlotWidth: 0
+  playerGridSlotHeight: 0
+  UIMainRoot: {fileID: 0}
+  playerInventoryUIObject: {fileID: 0}
+  hubInventoryUIObject: {fileID: 0}
+  hubPlayerInvUIObject: {fileID: 0}
+  carInventoryUIObject: {fileID: 0}
+  carPlayerInvUIObject: {fileID: 0}
+  primaryWeaponIcon: {fileID: 0}
+  secondaryWeaponIcon: {fileID: 0}
+  playerGridReference: {fileID: 0}
+  hubGridReference: {fileID: 0}
+  emptyWeaponIcon: {fileID: 0}
+  plrInventoryReference: {fileID: 0}
+  hubInventoryReference: {fileID: 0}
+  carInventoryReference: {fileID: 0}
+  equip: {fileID: 0}
+  hubInventoryChest: {fileID: 0}
+  carObjectChest: {fileID: 0}
+--- !u!114 &6591023241855518302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85453b12064c993478b5442c94a182c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  playerInventory: []
+  inventoryGrid: {fileID: 0}
+--- !u!114 &2368979387629698746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c160f6898575af4c809e8eda9d0c377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HubInventory
+  hubInventory: []
+  isOpen: 0
+--- !u!114 &334687272616901681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0150c6f55cf75dc40af9ea4913650efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarInventory
+--- !u!114 &4116282024498157318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149982934800771422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324a4679785c18842a74ff73c258b2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquipmentComponent
+  primaryWeapon: {fileID: 0}
+  secondaryWeapon: {fileID: 0}
+  consumables: []
+  inventory: {fileID: 0}

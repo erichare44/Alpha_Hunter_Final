@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c89b1fade5316844845613cf15551d2
+timeCreated: 1516908591
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/1 lane/road 1 lane direct side 2.prefab
+  uploadId: 307500

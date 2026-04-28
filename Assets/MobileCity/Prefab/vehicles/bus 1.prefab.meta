@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 06ce536be58c71d4fafcc92acf99f81c
+timeCreated: 1517702096
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/vehicles/bus 1.prefab
+  uploadId: 307500

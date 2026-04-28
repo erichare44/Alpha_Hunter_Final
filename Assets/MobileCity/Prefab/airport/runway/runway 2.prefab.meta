@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b05f5bf14f2635d42b4456a37a472915
+timeCreated: 1525956354
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/airport/runway/runway 2.prefab
+  uploadId: 307500

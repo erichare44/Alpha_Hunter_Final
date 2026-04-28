@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9c73808128796734882c9a5fccbf88d0
+timeCreated: 1519856034
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/street/billboard 2.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d5d9c5f94c30743439fc56059e1fc690
+timeCreated: 1516131258
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/resident_office/building d 3.prefab
+  uploadId: 307500

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9f28ec0d317a034587253fa543f46ca
+timeCreated: 1519760749
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/retro/old building 5.prefab
+  uploadId: 307500

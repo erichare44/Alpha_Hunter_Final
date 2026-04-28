@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6211658695924980535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464123684095530870}
+  - component: {fileID: 274896699498964541}
+  - component: {fileID: 457579787757303344}
+  m_Layer: 0
+  m_Name: PistolAmmo
+  m_TagString: ShopItem
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464123684095530870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211658695924980535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.26085, y: 2.79317, z: 17.78337}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &274896699498964541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211658695924980535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184c0d9a6d2db0a42895a4dbf0f3a1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  object: {fileID: 6211658695924980535}
+  cost: 150
+  interactUI: {fileID: 0}
+--- !u!114 &457579787757303344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211658695924980535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb6def639d6edb43bb061f2560ba752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InGameItem
+  itemInstance:
+    definition: {fileID: 11400000, guid: 495181c978c8a3741a62bb517c36e37a, type: 2}
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+    icon: {fileID: 21300000, guid: f41b01b08bea2d04ebf873d21884487a, type: 3}
+    stackCount: 1
+    rotated: 0
+  icon: {fileID: 21300000, guid: f41b01b08bea2d04ebf873d21884487a, type: 3}
+  itemDefinition: {fileID: 11400000, guid: 495181c978c8a3741a62bb517c36e37a, type: 2}

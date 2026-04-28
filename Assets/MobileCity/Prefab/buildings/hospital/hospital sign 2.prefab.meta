@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d1eba0a8c32e6948bed5d2a0a8a9b84
+timeCreated: 1517781120
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/buildings/hospital/hospital sign 2.prefab
+  uploadId: 307500

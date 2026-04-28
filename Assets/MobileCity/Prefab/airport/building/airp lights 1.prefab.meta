@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3a027812f59b25849b92e23f662a5494
+timeCreated: 1525987544
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112740
+  packageName: Optimized (Mobile) City
+  packageVersion: 1.5
+  assetPath: Assets/MobileCity/Prefab/airport/building/airp lights 1.prefab
+  uploadId: 307500
