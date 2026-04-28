@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: itemDefinition
       value: 
       objectReference: {fileID: 11400000, guid: 3cb9910577037af4b9d4c34196705bce, type: 2}
+    - target: {fileID: 4903130099495091778, guid: f173e0dcc48afb74e9bbc0fa5eaec8bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903130099495091778, guid: f173e0dcc48afb74e9bbc0fa5eaec8bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903130099495091778, guid: f173e0dcc48afb74e9bbc0fa5eaec8bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8438
+      objectReference: {fileID: 0}
     - target: {fileID: 5071812096849580649, guid: f173e0dcc48afb74e9bbc0fa5eaec8bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.095

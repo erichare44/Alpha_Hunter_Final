@@ -51,7 +51,15 @@ public class ShootingComponent : MonoBehaviour
     public void Shoot()
     {
         shootTimer = 0;
-        Instantiate(bullet, shootPos.position, gunPivot.transform.rotation);
+        GameObject newBullet = Instantiate(bullet, shootPos.position, gunPivot.transform.rotation);
+
+        Rigidbody rb = newBullet.GetComponent<Rigidbody>();
+        if (rb != null )
+        {
+            rb.linearVelocity = gunPivot.forward * 500f;
+
+            newBullet.transform.forward = cameraPosition.forward;
+        }
     }
 
 
