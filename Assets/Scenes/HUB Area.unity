@@ -1829,6 +1829,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288591555}
   m_CullTransparentMesh: 1
+--- !u!1 &308663460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514126451723477964, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+  m_PrefabInstance: {fileID: 336396993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &308663464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5602958686959627974, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+  m_PrefabInstance: {fileID: 336396993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308663469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308663460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05ce62e94a7ced448e5d9b2c3f7fce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootingComponent
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  shootDamage: 25
+  shootDistance: 200
+  shootRate: 0.25
+  gunModel: {fileID: 6179004576708658228, guid: 17f743c680ce95440b6864e0591c6b0a, type: 3}
+  bullet: {fileID: 9036607570985550741, guid: 67ed2b719a2197e4286e628c514f1a19, type: 3}
+  shootPos: {fileID: 1631372551}
+  gunPivot: {fileID: 1178549632}
+  cameraPosition: {fileID: 2058067982}
+  audioPlayer: {fileID: 0}
+  shootClips: []
+  audioShotVol: 0
 --- !u!1 &317885743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +2006,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2821765216733228521, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      propertyPath: shootincComponentRef
+      value: 
+      objectReference: {fileID: 308663469}
     - target: {fileID: 5602958686959627974, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1092466
@@ -2016,8 +2056,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5602958686959627974, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1178549632}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514126451723477964, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 308663469}
   m_SourcePrefab: {fileID: 100100000, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
 --- !u!1 &427134828
 GameObject:
@@ -5640,6 +5686,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5461320835613783329, guid: b1807e27653927747bc9a805965cb14a, type: 3}
+--- !u!1 &1178549631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178549632}
+  m_Layer: 7
+  m_Name: GunPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178549632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178549631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308663464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1198329510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8137,6 +8214,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618898754}
   m_CullTransparentMesh: 1
+--- !u!4 &1631372551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1383894244288908630, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+  m_PrefabInstance: {fileID: 336396993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1648389910
 GameObject:
   m_ObjectHideFlags: 0
@@ -10732,6 +10814,11 @@ RectTransform:
 --- !u!20 &2058067978 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1363713689428062637, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+  m_PrefabInstance: {fileID: 336396993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2058067982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8809336992399043837, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
   m_PrefabInstance: {fileID: 336396993}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111393429

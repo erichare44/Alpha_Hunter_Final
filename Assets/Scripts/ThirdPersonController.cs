@@ -1,8 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class ThirdPersonMotor : MonoBehaviour 
 {
+
+    [Header("ShootingComponent.cs")]
+    [SerializeField] private ShootingComponent shootincComponentRef;
+
     [Header("References")]
     [SerializeField] private ThirdPersonCameraController cameraController;
     [SerializeField] private Animator animator;
@@ -316,6 +321,10 @@ public class ThirdPersonMotor : MonoBehaviour
             return;
         }
 
+        shootincComponentRef.Shoot();
+
+        /*
+
         Ray ray = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         Vector3 targetPoint;
@@ -327,6 +336,7 @@ public class ThirdPersonMotor : MonoBehaviour
             {
                 if(weapon.weaponData != null)
                 {
+                    Debug.Log("Bullet Getting lost in emtpy If Statement");
                     
                 }
             }
@@ -336,6 +346,7 @@ public class ThirdPersonMotor : MonoBehaviour
             targetPoint = ray.origin + ray.direction * 100f;
         }
         weapon.UseWeapon(targetPoint);
+        */
     }
 
     void Interaction()

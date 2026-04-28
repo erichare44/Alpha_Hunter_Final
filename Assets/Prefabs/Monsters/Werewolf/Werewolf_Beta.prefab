@@ -73,6 +73,10 @@ PrefabInstance:
       value: Werewolf_Beta
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a0ac17931bd74c045aeec3af75aa2b29, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0ac17931bd74c045aeec3af75aa2b29, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}

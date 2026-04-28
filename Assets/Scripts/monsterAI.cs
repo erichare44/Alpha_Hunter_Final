@@ -26,9 +26,9 @@ public abstract class monsterAI : MonoBehaviour, IDamage
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
-        //OGhealth = data.health;
-       // create source for general sounds
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        
+        // create source for general sounds
         generalAudioSource = GetComponent<AudioSource>();
         if(generalAudioSource == null) generalAudioSource = gameObject.AddComponent<AudioSource>();
         //create source for footsteps

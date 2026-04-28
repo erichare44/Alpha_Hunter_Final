@@ -149,9 +149,7 @@ public class nestManager : MonoBehaviour
             // Wake them up and send them to the Alpha
             wolf.isZoneActive = true;
             wolf.SetForcedAlphaCombat(alphaPosition);
-        }
-
-        Debug.Log("<color=red>THE ALPHA HAS CALLED THE PACK.</color> All wolves are converging.");
+        }        
     }
     public void AlertNearbyZones(Vector3 pos, float dist)
     {
