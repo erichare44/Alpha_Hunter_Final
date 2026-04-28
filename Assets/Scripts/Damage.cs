@@ -23,11 +23,9 @@ public class Damage : MonoBehaviour
         if (rb == null)
 
             rb = GetComponent<Rigidbody>();
-        if (Type == damageType.bullet)
-        {
-            rb.AddForce(transform.forward * speed);
+       
             Destroy(gameObject, destroyTime);
-        }
+        
 
 
     }
@@ -55,10 +53,11 @@ public class Damage : MonoBehaviour
             hasHit = true;
             dmg.TakeDamage(damageAmount);
 
-            if (other.CompareTag("Enemy") && hitEffect != null)
+            if (hitEffect != null)
             {
                 Instantiate(hitEffect, transform.position, Quaternion.identity);
             }
+            hasHit = true;
             Destroy(gameObject);
         }
     }
