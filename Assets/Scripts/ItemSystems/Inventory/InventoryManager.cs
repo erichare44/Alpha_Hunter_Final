@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Scene loaded: " + scene.name);
+        //Debug.Log("Scene loaded: " + scene.name);
 
         InitializeManager();
         LoadInventoryState();
@@ -412,7 +412,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Loaded inventory prefabs: " + itemPrefabs.Count);
+        //Debug.Log("Loaded inventory prefabs: " + itemPrefabs.Count);
     }
 
     private GameObject GetItemPrefabByID(string itemID)
