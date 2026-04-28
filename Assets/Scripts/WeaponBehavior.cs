@@ -50,6 +50,7 @@ public class WeaponBehaviour : MonoBehaviour
 
         Vector3 direction = (targetPoint - muzzlePoint.position).normalized;
       
+        /*
         if (weaponData.spread > 0f)
         {
             direction += new Vector3
@@ -58,6 +59,7 @@ public class WeaponBehaviour : MonoBehaviour
                 Random.Range(-weaponData.spread, weaponData.spread));
             direction.Normalize();
         }
+        */
 
 
 

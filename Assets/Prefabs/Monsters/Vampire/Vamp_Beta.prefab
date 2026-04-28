@@ -65,6 +65,10 @@ PrefabInstance:
       value: Vamp_Beta
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: afd598e65b92555459a3887626ed4c66, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afd598e65b92555459a3887626ed4c66, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -124,6 +128,8 @@ MonoBehaviour:
   isAttacker: 0
   currentHealth: 0
   currentState: 0
+  drainRange: 15
+  drainTickRate: 0.5
 --- !u!195 &4907893488610487556
 NavMeshAgent:
   m_ObjectHideFlags: 0

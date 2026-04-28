@@ -42,6 +42,9 @@ public class Damage : MonoBehaviour
         rb.linearVelocity = direction.normalized * speed;
 
         transform.forward = direction.normalized;
+
+        Debug.Log("Launch() called in Damage.cs");
+
     }
 
     private void OnTriggerEnter(Collider other)
