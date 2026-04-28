@@ -298,7 +298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: -228}
+  m_AnchoredPosition: {x: 960, y: -292}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323831915
@@ -508,15 +508,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credits\n\n\nDevelopment Team\n\nCade Andrasco\nTramane Handy\nEric Hare\nChristopher
+  m_text: 'Credits\n\n\nDevelopment Team\n\nCade Andrasco\nTramane Handy\nEric Hare\nChristopher
     LaFramboise\nSyonn Pandya\n\nMeshy.AI Components\n\nTrees\nWerewolf Models\nVampire
     Models\nAbandoned Cabin\nAbandoned Farmhouse\nAbandoned Barn\nHUB Warehouse\nFrences\nGates\nCabin
     Pond\n\nUnity Assets\n\nExit Door Prefab\t\tSimViz\nNPC Model\t\tDenysAlmaral\nBuilding
     Objects\t\tIL.Ranch\nTown and Building Objects\t\tPandazole\nRealistic Crate
-    and Chest Bundle\t\tDitag Games\nSurvival Props Pack 1.0\t\tAnni\nGun Icons Package\t\tNavidtbt\n\nSounds\n\nForest
+    and Chest Bundle\t\tDitag Games\nSurvival Props Pack 1.0\t\tAnni\nGun Icons Package\t\tNavidtbt\nAdventure
+    Character\t\tMaksim Bugrimov\nGuns Pack: Low Poly Guns Collection\t\tFun Assets\n\nSounds\n\nForest
     Footsteps\t\tLetterborne\nScary Werewolf Voice Sound Effect\t\tNicknamelarry\nBaby
     Dragon Sounds\t\tSonzaw\n10221 Vampire Dying Hiss\t\tRobinhood76\nMonster Bite\t\tLucasduff\nCreahmn
-    Werewolf Howl Single Nicholas-Judy tdc\tDesignerchoice
+    Werewolf Howl Single Nicholas-Judy tdc\tDesignerchoice'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
