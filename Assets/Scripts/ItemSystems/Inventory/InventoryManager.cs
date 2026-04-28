@@ -183,7 +183,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("InventoryManager could not find: " + objectName);
         return null;
     }
 
@@ -224,26 +223,22 @@ public class InventoryManager : MonoBehaviour
     {
         if (itemObject == null)
         {
-            Debug.LogError("CreatePlayerItemUI failed: itemObject is null.");
             return;
         }
 
         if (inventoryItemUIPrefab == null)
         {
-            Debug.LogError("CreatePlayerItemUI failed: inventoryItemUIPrefab is missing.");
             return;
         }
 
         if (playerItemLayer == null)
         {
-            Debug.LogError("CreatePlayerItemUI failed: playerItemLayer is missing.");
             return;
         }
 
         InGameItem wi = itemObject.GetComponent<InGameItem>();
         if (wi == null)
         {
-            Debug.LogError("CreatePlayerItemUI failed: WeaponInstance missing on " + itemObject.name);
             return;
         }
 
@@ -252,7 +247,6 @@ public class InventoryManager : MonoBehaviour
 
         if (itemUI == null)
         {
-            Debug.LogError("CreatePlayerItemUI failed: InventoryItemUI missing on prefab.");
             return;
         }
 
@@ -354,13 +348,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (plrInventoryReference == null || hubInventoryReference == null)
         {
-            Debug.LogError("LoadInventoryState failed: inventory references missing.");
             return;
         }
 
         if (playerItemLayer == null)
         {
-            Debug.LogError("LoadInventoryState failed: playerItemLayer missing.");
             return;
         }
 
@@ -427,7 +419,6 @@ public class InventoryManager : MonoBehaviour
                 return prefab;
         }
 
-        Debug.LogWarning("No item prefab found for itemID: " + itemID);
         return null;
     }
 

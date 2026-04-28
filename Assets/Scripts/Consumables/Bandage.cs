@@ -38,12 +38,10 @@ public class Bandage : MonoBehaviour
 
                 playerEquipment.consumables.RemoveAt(i);
 
-                Debug.Log("Bandage used. Healed for " + healAmount);
                 return;
             }
         }
 
-        Debug.Log("No bandage in inventory.");
     }
 
 

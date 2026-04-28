@@ -34,7 +34,6 @@ public class InventoryGrid
     {
         if (weapon == null)
         {
-            Debug.LogError("AutoPlaceWeapon() failed: weapon is null.");
             return false;
         }
 
@@ -42,14 +41,9 @@ public class InventoryGrid
 
         if (weaponInstance == null)
         {
-            Debug.LogError("AutoPlaceWeapon() failed: WeaponInstance missing on " + weapon.name);
             return false;
         }
 
-        if (weaponInstance.itemInstance == null)
-        {
-            Debug.LogError("AutoPlaceWeapon() failed: itemInstance missing on " + weapon.name);
-        }
 
         float itemWidth = weaponInstance.itemInstance.width;
         float itemHeight = weaponInstance.itemInstance.height;
@@ -62,13 +56,11 @@ public class InventoryGrid
                 if (CanPlaceItem(startX, startY, itemWidth, itemHeight))
                 {
                     PlaceItem(startX, startY, weapon, weaponInstance);
-                    Debug.Log("Placed " + weapon.name + " at cell (" + startX + ", " + startY + ")");
                     return true;
                 }
             }
         }
 
-        Debug.LogWarning("No Valid Space found for " + weapon.name);
         return false;
 
     }
@@ -84,7 +76,6 @@ public class InventoryGrid
             {
                 if (gridCellsArray[startX + x, startY + y] != null)
                 {
-                    Debug.Log("Blocked at: (" + (startX + x) + ", " + (startY + y) + ")");
                     return false;
                 }
             }
@@ -103,7 +94,6 @@ public class InventoryGrid
             for (int y = 0; y < itemHeight; y++)
             {
                 gridCellsArray[startX + x, startY + y] = weapon;
-                Debug.Log("Occupying cell: (" + (startX + x) + ", " + (startY + y) + ")");
             }
         }
 
@@ -130,7 +120,6 @@ public class InventoryGrid
             }
         }
 
-        Debug.Log("Removed item from grid: " + weapon.name);
     }
 
 

@@ -29,7 +29,6 @@ public class POIDoor : MonoBehaviour, IInteract
         else
         {
             //add door locked stuff here
-            Debug.Log("Door is locked: Not contract target.");
         }
     }
 

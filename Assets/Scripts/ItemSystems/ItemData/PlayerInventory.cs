@@ -33,7 +33,6 @@ public class PlayerInventory : MonoBehaviour, iPickup
             {
                 DontDestroyOnLoad(obj);
                 playerInventory.Add(obj);
-                Debug.Log("Added Item: " + obj.name + "To bag");
                 InventoryManager.instance.CreatePlayerItemUI(obj);
 
                 if (obj.CompareTag("ConsumablePickup"))
@@ -46,10 +45,6 @@ public class PlayerInventory : MonoBehaviour, iPickup
 
                 //obj.SetActive(false);
 
-            }
-            else if (!objectPlaced)
-            {
-                Debug.LogError("Error adding to bag, object not placed");
             }
         }
     }

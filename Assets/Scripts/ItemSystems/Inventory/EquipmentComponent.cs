@@ -32,7 +32,6 @@ public class EquipmentComponent : MonoBehaviour
 
         if (Input.GetButtonDown("Heal"))
         {
-            Debug.Log("HealKey Pressed");
 
             if (consumables.Count > 0)
             { 

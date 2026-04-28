@@ -35,7 +35,6 @@ public class GridControllerUI : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     {
         if (weaponInstance == null || weaponInstance.itemInstance == null)
         {
-            Debug.LogError("InventoryItemUI Setup failed: missing WeaponInstance or itemInstance.");
             return;
         }
 
@@ -62,10 +61,6 @@ public class GridControllerUI : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
         rectTransform.anchoredPosition = new Vector2(posX, posY);
         // rectTransform.sizeDelta = new Vector2(pixelWidth, pixelHeight);
-
-        Debug.Log("UI Item placed at grid: " + gridX + ", " + gridY);
-        Debug.Log("UI Position: " + posX + ", " + posY);
-        Debug.Log("UI Size: " + pixelWidth + " x " + pixelHeight);
 
     }
 
