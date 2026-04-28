@@ -302,7 +302,11 @@ public class werewolfController : monsterAI
     void FinishAttack()
     {
         hasDealtDamage = false;
-        agent.isStopped = false;
+        if(agent != null && agent.isActiveAndEnabled && agent.isOnNavMesh)
+        {
+            agent.isStopped = false;
+        }
+        
         SwitchState(WolfState.Stalking);
     }
 
