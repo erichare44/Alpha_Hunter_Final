@@ -3734,7 +3734,7 @@ MonoBehaviour:
     m_Bits: 128
   gunModel: {fileID: 6179004576708658228, guid: 17f743c680ce95440b6864e0591c6b0a, type: 3}
   bullet: {fileID: 9036607570985550741, guid: 67ed2b719a2197e4286e628c514f1a19, type: 3}
-  shootPos: {fileID: 1383894244288908630}
+  shootPos: {fileID: 8809336992399043837}
   gunPivot: {fileID: 7418540746820021802}
   cameraPosition: {fileID: 8809336992399043837}
   audioPlayer: {fileID: 0}
@@ -4464,11 +4464,6 @@ PrefabInstance:
 --- !u!4 &1251240488780816765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8411885119081229786, guid: 0cb9a9686314f6e4986536f962ef2c98, type: 3}
-  m_PrefabInstance: {fileID: 7340947015945604263}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1383894244288908630 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8562710758820577777, guid: 0cb9a9686314f6e4986536f962ef2c98, type: 3}
   m_PrefabInstance: {fileID: 7340947015945604263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3141571819660094924 stripped

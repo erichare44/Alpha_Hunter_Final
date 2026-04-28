@@ -56,7 +56,7 @@ public class ShootingComponent : MonoBehaviour
         Rigidbody rb = newBullet.GetComponent<Rigidbody>();
         if (rb != null )
         {
-            rb.linearVelocity = gunPivot.forward * 500f;
+            rb.linearVelocity = gunPivot.forward * 100f;
 
             newBullet.transform.forward = cameraPosition.forward;
         }
