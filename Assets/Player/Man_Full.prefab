@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCameraController
   target: {fileID: 8087910819410526431}
-  mouseSensitivity: 300
+  mouseSensitivity: 50
   shoulderOffset: 0.65
   lookAtHeight: -0.35
   minPitch: -35

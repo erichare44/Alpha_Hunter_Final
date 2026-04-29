@@ -3,7 +3,7 @@ using UnityEngine;
 public class cameraController : MonoBehaviour
 {
 
-    [SerializeField] int Sensitivity;
+    [SerializeField] float Sensitivity;
     [SerializeField] int lockVertMin, lockVertMax;
     [SerializeField] bool invertY;
     [SerializeField] Transform player;
@@ -20,8 +20,8 @@ public class cameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * Sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Sensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * Sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * Sensitivity * Time.deltaTime;
 
         if(invertY)
         {

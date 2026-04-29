@@ -121,6 +121,11 @@ public class gameManager : MonoBehaviour
 
     public void RefreshReferences()
     {
+        if (menuPause != null) menuPause.SetActive(false);
+        if (XPUI != null) XPUI.SetActive(false);
+        if (BountyBoardUI != null) BountyBoardUI.SetActive(false);
+        if (AlphaWinScreen != null) AlphaWinScreen.SetActive(false);
+        if (DeathScreen != null) DeathScreen.SetActive(false);
         //player setup
         User = GameObject.FindWithTag("Player");
             if (User != null)
@@ -137,7 +142,7 @@ public class gameManager : MonoBehaviour
         //find scene specific objects
         hubInventoryChest = GameObject.FindWithTag("HubChest");
         SpawnPos = GameObject.FindWithTag("PlayerSpawnPoint");
-        menuPause = GameObject.Find("PauseMenuRoot");
+        //menuPause = GameObject.Find("PauseMenuRoot");
         
 
         //health bar logic
@@ -163,19 +168,16 @@ public class gameManager : MonoBehaviour
         {
             currentObjective = UIObjective.GetComponentInChildren<TMP_Text>();
         }
-
+        needsDeath = false;
+        needsWin = false;
         //scene UI stuff
-        XPUI = GameObject.FindWithTag("XPUI");
-        BountyBoardUI = GameObject.FindWithTag("Bounty Board");
-        AlphaWinScreen = GameObject.FindWithTag("XPCounter");
-        DeathScreen = GameObject.FindWithTag("LoseMenu");
+        //XPUI = GameObject.FindWithTag("XPUI");
+        //BountyBoardUI = GameObject.FindWithTag("Bounty Board");
+        //AlphaWinScreen = GameObject.FindWithTag("XPCounter");
+        //DeathScreen = GameObject.FindWithTag("LoseMenu");
 
         //safe deactivation
-        if (menuPause != null) menuPause.SetActive(false);
-        if (XPUI != null) XPUI.SetActive(false);
-        if (BountyBoardUI != null) BountyBoardUI.SetActive(false);
-        if (AlphaWinScreen != null) AlphaWinScreen.SetActive(false);
-        if (DeathScreen != null) DeathScreen.SetActive(false);
+        
 
         
     }
@@ -204,7 +206,8 @@ public class gameManager : MonoBehaviour
         PlayerMenuControls();
         if (needsWin) { OpenWinExtraction(); }
         if (needsDeath) { OpenDeathScreen(); }
-        moneyCounter.text = "Current Money: " + shopSystem.currentMoney.ToString();
+        if (moneyCounter != null && shopSystem != null)
+        { moneyCounter.text = "Current Money: " + shopSystem.currentMoney.ToString(); }
         if (selectedPOI == "")
         {
             currentObjective.text = "Select a Bounty";
@@ -401,10 +404,11 @@ public class gameManager : MonoBehaviour
 
     void OpenWinExtraction()
     {
+        needsWin = false;
         StatePause();
         activeMenuType = MenuType.Win;
         menuActive = AlphaWinScreen;
-        AlphaWinScreen.SetActive(true);
+        if(AlphaWinScreen != null) AlphaWinScreen.SetActive(true);
     }
 
     public void CloseAlphaKilledWinScreen()
@@ -429,10 +433,12 @@ public class gameManager : MonoBehaviour
 
     public void OpenDeathScreen()
     {
+        needsDeath = false;
+
         StatePause();
         activeMenuType = MenuType.Lose;
         menuActive = DeathScreen;
-        DeathScreen.SetActive(true);
+        if(DeathScreen != null) DeathScreen.SetActive(true);
     }
 
     public void CloseDeathScreen()
