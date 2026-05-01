@@ -50,19 +50,6 @@ public class WeaponBehaviour : MonoBehaviour
 
         Vector3 direction = (targetPoint - muzzlePoint.position).normalized;
       
-        /*
-        if (weaponData.spread > 0f)
-        {
-            direction += new Vector3
-                (Random.Range(-weaponData.spread, weaponData.spread),
-                Random.Range(-weaponData.spread, weaponData.spread),
-                Random.Range(-weaponData.spread, weaponData.spread));
-            direction.Normalize();
-        }
-        */
-
-
-
 
         if (audioSource != null && fireClip != null)
         {
@@ -89,6 +76,7 @@ public class WeaponBehaviour : MonoBehaviour
         }
         else
         {
+
             if (rb != null)
             {
                 rb.linearVelocity = direction * weaponData.projectileSpeed;
@@ -99,6 +87,9 @@ public class WeaponBehaviour : MonoBehaviour
         {
             cam.TriggerShake(0.1f, 0.2f);
         }
+
+
+
     }
 
     private void PerformMelee()

@@ -6,7 +6,7 @@ public class ThirdPersonMotor : MonoBehaviour
 {
 
     [Header("ShootingComponent.cs")]
-    [SerializeField] private ShootingComponent shootincComponentRef;
+    //[SerializeField] private ShootingComponent shootincComponentRef;
 
     [Header("References")]
     [SerializeField] private ThirdPersonCameraController cameraController;
@@ -53,8 +53,8 @@ public class ThirdPersonMotor : MonoBehaviour
 
     private CharacterController controller;
     private float verticalVelocity;
-    private float currentMoveX;
-    private float currentMoveY;
+    //private float currentMoveX;
+    //private float currentMoveY;
     private bool isSprinting;
     private bool isDodging;
     private float dodgeTimer;
@@ -94,7 +94,7 @@ public class ThirdPersonMotor : MonoBehaviour
     {
         if(gameManager.instance.SpawnPos == null)
         {
-            Debug.LogWarning("Spawn PLayer failed.");
+            //Debug.LogWarning("Spawn PLayer failed.");
             return;
         }
 
@@ -112,7 +112,7 @@ public class ThirdPersonMotor : MonoBehaviour
     {
         if (cameraController == null)
         {
-            Debug.LogWarning("ThirdPersonMotor: No camera controller assigned.");
+           // Debug.LogWarning("ThirdPersonMotor: No camera controller assigned.");
             return;
         }
         ReadMovementInput();
@@ -291,10 +291,10 @@ public class ThirdPersonMotor : MonoBehaviour
         isAiming = Input.GetKey(aimkey) && !isDodging;
     
     }
-    
+
     private void HandleShoot()
     {
-        
+
         if (!isAiming)
         {
             return;
@@ -304,7 +304,7 @@ public class ThirdPersonMotor : MonoBehaviour
         {
             return;
         }
-        
+
         if (aimCamera == null || weaponManager == null)
         {
             return;
@@ -316,40 +316,29 @@ public class ThirdPersonMotor : MonoBehaviour
             return;
         }
         WeaponBehaviour weapon = equippedWeapon.GetComponent<WeaponBehaviour>();
+
         if (weapon == null)
         {
             return;
         }
 
-        shootincComponentRef.Shoot();
-
-        /*
-
-        Ray ray = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
+        bool automatic = weapon.weaponData.isAutomatic 
+            ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
+        Ray ray = aimCamera.ScreenPointToRay(new Vector3(0.5f, 0.5f, 05f));
         Vector3 targetPoint;
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+
+        if (Physics.Raycast(ray, out RaycastHit hit, weapon.weaponData.range))
         {
             targetPoint = hit.point;
-            IDamage dmg = hit.collider.GetComponentInParent<IDamage>();
-            if (dmg != null)
-            {
-                if(weapon.weaponData != null)
-                {
-                    Debug.Log("Bullet Getting lost in emtpy If Statement");
-                    
-                }
-            }
         }
         else
         {
-            targetPoint = ray.origin + ray.direction * 100f;
+            targetPoint = ray.origin + ray.direction * weapon.weaponData.range;
         }
         weapon.UseWeapon(targetPoint);
-        */
     }
 
-    void Interaction()
+        void Interaction()
     {
         if (Input.GetButtonDown("Interact"))
         {
