@@ -26,6 +26,9 @@ public class ThirdPersonMotor : MonoBehaviour
     [SerializeField] private float dodgeSpeed = 8f;
     [SerializeField] private float dodgeDuration = 0.3f;
     [SerializeField] private float dodgeCooldown = 1f;
+    private bool isDodging;
+    private bool isInvincible;
+    private float invincibilityTimer;
 
     [SerializeField] private float dodgeInvincibilityDuration = 0.2f;
     [SerializeField] private KeyCode dodgeKey = KeyCode.LeftAlt;
@@ -56,7 +59,7 @@ public class ThirdPersonMotor : MonoBehaviour
     //private float currentMoveX;
     //private float currentMoveY;
     private bool isSprinting;
-    private bool isDodging;
+  
     private float dodgeTimer;
     private Vector3 dodgeDirection;
     public Vector2 MoveInput { get; private set; }
@@ -122,6 +125,7 @@ public class ThirdPersonMotor : MonoBehaviour
         HandleShoot();
         HandleJump();
         Interaction();
+        HandleInvincibility();
 
         if (!isDodging && Input.GetKeyDown(dodgeKey))
         {
@@ -221,6 +225,9 @@ public class ThirdPersonMotor : MonoBehaviour
     private void StartDodge()
     {
         isDodging = true;
+        isInvincible = true;
+        invincibilityTimer = dodgeInvincibilityDuration;
+
         dodgeTimer = dodgeDuration;
         Vector3 forward = cameraController.FlatForward;
         Vector3 right = cameraController.FlatRight;
@@ -386,11 +393,18 @@ public class ThirdPersonMotor : MonoBehaviour
             }
         }
     }
-    private void dodgeInvincibilityTimer()
+private void HandleInvincibility()
     {
+        if(!isInvincible)
+        {
+            return;
+        }
 
-
-        return;
-    }    
+        invincibilityTimer -= Time.deltaTime;
+        if(invincibilityTimer <= 0f)
+        {
+            isInvincible = false;
+        }
+    }
 
 }

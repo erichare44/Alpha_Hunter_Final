@@ -58,7 +58,7 @@ public class gameManager : MonoBehaviour
 
     // private values needed for menus
     float timeScaleOriginal;
-    bool isPaused;
+    public bool isPaused => menuActive != null;
     private MenuType activeMenuType;
     public bool canBuy;
     bool needsWin = false;
@@ -255,7 +255,7 @@ public class gameManager : MonoBehaviour
 
     public void StatePause()
     {
-        isPaused = true;
+        
         Time.timeScale = 0;
 
         Cursor.visible = true;
@@ -265,7 +265,7 @@ public class gameManager : MonoBehaviour
 
     public void StateUnpause()
     {
-        isPaused = false;
+       
         Time.timeScale = timeScaleOriginal;
 
         Cursor.visible = false;
