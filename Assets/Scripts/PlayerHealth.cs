@@ -22,8 +22,8 @@ public class PlayerHealth : MonoBehaviour, IDamage
 
     public void TakeHealing(float amount)
 
-    { 
-        currentHealth += amount;
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         gameManager.instance.healthBar.UpdateHealthBar(currentHealth, maxHealth);
     }
 

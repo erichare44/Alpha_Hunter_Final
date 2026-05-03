@@ -33,6 +33,11 @@ public class EquipmentComponent : MonoBehaviour
         if (Input.GetButtonDown("Heal"))
         {
 
+
+            if (gameManager.instance.User.GetComponent<PlayerHealth>().currentHealth >= gameManager.instance.User.GetComponent<PlayerHealth>().maxHealth)
+            {
+                return;
+            } 
             if (consumables.Count > 0)
             { 
                 if (consumables[0].GetComponent<Bandage>().GetHealthComponent() != null && consumables[0].GetComponent<Bandage>().GetPlayerEquipment() != null)
