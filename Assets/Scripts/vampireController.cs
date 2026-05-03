@@ -58,8 +58,12 @@ public class vampireController : monsterAI
         }
         //if seen flee
         if (isSeen && currentState == VampireState.Prowling)
-            if (isAttacker) SwitchState(VampireState.Lunging);
-            else SwitchState(VampireState.Fleeing);            
+            if (stateTimer > 0.3f)
+            {
+                if (isAttacker) SwitchState(VampireState.Lunging);
+                else SwitchState(VampireState.Fleeing);
+            }
+                        
                
         switch(currentState)
         {
@@ -164,7 +168,7 @@ public class vampireController : monsterAI
         {
             outOfSightTimer += Time.deltaTime;
             //break los and blink then prowl
-            if(outOfSightTimer >= 0.5f)
+            if(outOfSightTimer >= 1.5f)
             {
                 Blink();
                 SwitchState(VampireState.Prowling);
@@ -315,14 +319,24 @@ public class vampireController : monsterAI
         Vector3 playerDir = (transform.position - camPos).normalized;
         float dot = Vector3.Dot(camForward, playerDir);
 
-        if (dot > 0.4f)
+        if (dot > 0.5f)
         {
-            RaycastHit hit;
-            //lets try a spere cast
-            if (Physics.Linecast(camPos, transform.position + Vector3.up * 1.5f, out hit, layerMask))
+            Vector3[] checkpoints =
             {
-                if (hit.transform.root == transform.root) return true;
+                transform.position + Vector3.up * 1.8f, //head
+                transform.position + Vector3.up * 1.0f, //chest
+                transform.position + Vector3.up * 0.2f, //feet
+            }; 
+            foreach (Vector3 point in checkpoints)
+            {
+                RaycastHit hit;
+                //lets try a spere cast
+                if (Physics.Linecast(camPos, transform.position + Vector3.up * 1.5f, out hit, layerMask))
+                {
+                    if (hit.transform.root == transform.root) return true;
+                }
             }
+           
            
         }
         return false;
@@ -356,7 +370,11 @@ public class vampireController : monsterAI
             agent.acceleration = 150f;
         }
         LineRenderer lr = GetComponent<LineRenderer>();
-        if (lr != null) lr.enabled = false;
+        if (lr != null)
+        {
+            lr.enabled = false;
+            lr.positionCount = 0;
+        }
     }
     void UpdateAnimations()
     {
