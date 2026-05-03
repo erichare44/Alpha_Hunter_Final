@@ -12,12 +12,24 @@ public class Interactable : MonoBehaviour, IInteract
 
     bool canInteract;
 
+
+    private void Start()
+    {
+        if (gameObject.name == "Bounty Board")
+        {
+            @object = gameManager.instance.BountyBoardUI;
+        }
+        if(gameObject.name == "Xp Upgrades")
+        {
+            @object = gameManager.instance.XPUI;
+        }
+    }
     private void Awake()
     {
         if (@object != null && @object.GetComponent<InGameItem>())
-        { 
+        {
             @object.GetComponent<InGameItem>().PullItemData();
-        }
+        }      
     }
     void Update()
     {
@@ -32,7 +44,7 @@ public class Interactable : MonoBehaviour, IInteract
         if(other.CompareTag("Player"))
         {
             canInteract = true;
-            if (interactUI != null) interactUI.SetActive(true);
+            if (interactUI != null && !@object.CompareTag("Bounty Board") && !@object.CompareTag("XPUI")) interactUI.SetActive(true);
         }
     }
 
@@ -41,7 +53,7 @@ public class Interactable : MonoBehaviour, IInteract
         if(other.CompareTag("Player"))
         {
             canInteract = false;
-            if (interactUI != null) interactUI.SetActive(false);
+            if (interactUI != null && !@object.CompareTag("Bounty Board") && !@object.CompareTag("XPUI")) interactUI.SetActive(false);
         }
     }
 

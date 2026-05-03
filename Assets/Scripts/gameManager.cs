@@ -64,6 +64,11 @@ public class gameManager : MonoBehaviour
     bool needsWin = false;
     bool needsDeath = false;
     public int talkedNPCCount;
+    public int amountSprintUpgraded;
+    public int amountHPUpgraded;
+    public int amountXPModDeadUpgraded;
+    public int amountXPModExtUpgraded;
+
 
     [SerializeField] GameObject hubInventoryChest;
     [SerializeField] GameObject carObject;
@@ -375,6 +380,7 @@ public class gameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("HUB Area");
+        talkedNPCCount = 0;
         needsDeath = true;
     }
 
@@ -390,6 +396,7 @@ public class gameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("HUB Area");
+        talkedNPCCount = 0;
         shopSystem.hasExtracted = true;
         needsWin = true;
     }
@@ -451,5 +458,6 @@ public class gameManager : MonoBehaviour
     public void BackToHUB()
     {
         loadLevel("HUB Area");
+        talkedNPCCount = 0;
     }
 }
