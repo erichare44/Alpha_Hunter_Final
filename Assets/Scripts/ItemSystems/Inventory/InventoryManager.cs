@@ -106,6 +106,8 @@ public class InventoryManager : MonoBehaviour
     {
         //Debug.Log("Scene loaded: " + scene.name);
 
+        RefreshInventoryUIReferences();
+
         InitializeManager();
         LoadInventoryState();
     }
@@ -164,6 +166,95 @@ public class InventoryManager : MonoBehaviour
             {
                 AssignDefaultSprites(equip);
                 AssignSpritesFromEquipment(equip);
+            }
+        }
+    }
+
+    public void RefreshInventoryUIReferences()
+    {
+        Debug.Log("Refreshing Inventory UI References...");
+
+        if (playerGridReference == null || playerGridReference.Equals(null))
+        {
+            GameObject grid = GameObject.Find("PlayerInvGrid");
+            if (grid != null)
+            {
+                playerGridReference = grid;
+                Debug.Log("Reassigned playerGridReference");
+            }
+            else
+            {
+                Debug.LogWarning("PlayerInventoryGrid not found!");
+            }
+        }
+
+        if (hubGridReference == null || hubGridReference.Equals(null))
+        {
+            GameObject grid = GameObject.Find("HubInventoryGrid");
+            if (grid != null)
+            {
+                hubGridReference = grid;
+                Debug.Log("Reassigned hubGridReference");
+            }
+            else
+            {
+                Debug.LogWarning("HubInventoryGrid not found!");
+            }
+        }
+
+        if (playerInventoryUIObject == null || playerInventoryUIObject.Equals(null))
+        {
+            GameObject playerUI = GameObject.Find("InventoryRoot");
+            if (playerUI != null)
+            {
+                playerInventoryUIObject = playerUI;
+                Debug.Log("Reassigned playerInventoryUIObject");
+            }
+            else
+            {
+                Debug.LogWarning("playerInventoryUIObject Not found!");
+            }
+        }
+
+        if (hubInventoryUIObject == null || hubInventoryUIObject.Equals(null))
+        {
+            GameObject hubUI = GameObject.Find("HubInventoryRoot");
+            if (hubUI != null)
+            {
+                hubInventoryUIObject = hubUI;
+                Debug.Log("Reassigned hubInventoryUIObject");
+            }
+            else
+            {
+                Debug.LogWarning("HubInventoryUI not found!");
+            }
+        }
+
+        if (playerItemLayer == null || playerItemLayer.Equals(null))
+        {
+            GameObject layer = GameObject.Find("ItemOverlay");
+            if (layer != null)
+            {
+                playerItemLayer = layer.transform;
+                Debug.Log("Reassigned playerItemLayer");
+            }
+            else
+            {
+                Debug.LogWarning("PlayerItemLayer not found!");
+            }
+        }
+
+        if (hubItemLayer == null || hubItemLayer.Equals(null))
+        {
+            GameObject layer = GameObject.Find("HubItemOverlay");
+            if (layer != null)
+            {
+                hubItemLayer = layer.transform;
+                Debug.Log("Reassigned hubItemLayer");
+            }
+            else
+            {
+                Debug.LogWarning("HubItemLayer not found!");
             }
         }
     }
@@ -251,6 +342,30 @@ public class InventoryManager : MonoBehaviour
         }
 
         itemUI.Setup(wi, playerItemLayer, playerGridSlotWidth, playerGridSlotHeight);
+    }
+
+    public void CreateHubItemUI(GameObject itemObject)
+    {
+        if (itemObject == null)
+            return;
+
+        if (inventoryItemUIPrefab == null)
+            return;
+
+        if (hubItemLayer == null)
+            return;
+
+        InGameItem wi = itemObject.GetComponent<InGameItem>();
+        if (wi == null)
+            return;
+
+        GameObject uiItem = Instantiate(inventoryItemUIPrefab, hubItemLayer);
+        GridControllerUI itemUI = uiItem.GetComponent<GridControllerUI>();
+
+        if (itemUI == null)
+            return;
+
+        itemUI.Setup(wi, hubItemLayer, playerGridSlotWidth, playerGridSlotHeight);
     }
 
 
@@ -382,7 +497,7 @@ public class InventoryManager : MonoBehaviour
             {
                 hubGridReal.PlaceWeaponAt(item, saved.x, saved.y);
                 hubInventoryReference.hubInventory.Add(item);
-                // create hub UI later if needed
+                CreateHubItemUI(item);
             }
         }
     }
@@ -404,7 +519,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        //Debug.Log("Loaded inventory prefabs: " + itemPrefabs.Count);
     }
 
     private GameObject GetItemPrefabByID(string itemID)
