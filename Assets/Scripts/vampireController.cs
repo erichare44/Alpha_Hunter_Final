@@ -370,7 +370,11 @@ public class vampireController : monsterAI
             agent.acceleration = 150f;
         }
         LineRenderer lr = GetComponent<LineRenderer>();
-        if (lr != null) lr.enabled = false;
+        if (lr != null)
+        {
+            lr.enabled = false;
+            lr.positionCount = 0;
+        }
     }
     void UpdateAnimations()
     {
