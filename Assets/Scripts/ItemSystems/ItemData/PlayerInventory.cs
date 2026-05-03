@@ -35,7 +35,7 @@ public class PlayerInventory : MonoBehaviour, iPickup
                 playerInventory.Add(obj);
                 InventoryManager.instance.CreatePlayerItemUI(obj);
 
-                if (obj.CompareTag("ConsumablePickup"))
+                if (obj.GetComponent<Bandage>())
                 {
                     InventoryManager.instance.equip.consumables.Add(obj);
                 }
