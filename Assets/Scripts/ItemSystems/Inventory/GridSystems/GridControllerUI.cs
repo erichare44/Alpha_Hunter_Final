@@ -174,6 +174,13 @@ public class GridControllerUI : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     private bool TryDropIntoHubGrid(Vector2 screenPosition)
     {
+        GameObject hubMenu = InventoryManager.instance.GetHubInventoryMenu();
+
+        if (hubMenu == null || !hubMenu.activeInHierarchy)
+        {
+            return false;
+        }
+
         GameObject gridObject = InventoryManager.instance.GetHubGrid();
         if (gridObject == null)
             return false;
