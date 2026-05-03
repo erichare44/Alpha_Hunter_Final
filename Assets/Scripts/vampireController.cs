@@ -282,6 +282,7 @@ public class vampireController : monsterAI
         if (lr != null)
         {
             lr.enabled = true;
+            lr.positionCount = 2;
             lr.SetPosition(0, transform.position + Vector3.up * 1.5f); //vamp Chest
             lr.SetPosition(1, player.position + Vector3.up * 1f);     //player Chest
         }
