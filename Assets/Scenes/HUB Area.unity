@@ -1978,6 +1978,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5284759739257170809, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      propertyPath: weapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284759739257170809, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      propertyPath: 'weapons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284759739257170809, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
+      propertyPath: 'weapons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5602958686959627974, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1092466
