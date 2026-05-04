@@ -21,12 +21,7 @@ public class buttonFunctions : MonoBehaviour
     public TextMeshProUGUI DeathXPEarned;
     public TextMeshProUGUI deathXPTotal;
 
-    int amountXPModExtUpgraded;
-    int amountXPModDeadUpgraded;
-    int amountSprintUpgraded;
-    int amountHPUpgraded;
-    int HPResetAmount;
-    int SprintResetAmount;
+    
     int possible1;
     int possible2;
 
@@ -51,10 +46,10 @@ public class buttonFunctions : MonoBehaviour
         BountyAmount1.text = "Bounty Amount: $" + possible1.ToString();
         BountyAmount2.text = "Bounty Amount: $" +possible2.ToString();
         SkillPointAmount.text = "Skill Points Available:\t\t" + gameManager.instance.shopSystem.skillPointAmount.ToString();
-        healthXPTxt.text = "Upgrade Base Health Amount " + ((amountHPUpgraded) * (1 + HPResetAmount)).ToString() + " / 25";
-        sprintXPTxt.text = "Upgrade Sprint Speed " + ((amountSprintUpgraded) * (1 + SprintResetAmount)).ToString() + " / 25";
-        XPExtTxt.text = "Upgrade Bonus XP earned on Extraction " + amountXPModExtUpgraded.ToString() + " / 5";
-        XPDeadTxt.text = "Upgrade amount of XP saved upon death " + amountXPModDeadUpgraded.ToString() + " / 3";
+        healthXPTxt.text = "Upgrade Base Health Amount " + (gameManager.instance.amountHPUpgraded).ToString() + " / 25";
+        sprintXPTxt.text = "Upgrade Sprint Speed " + (gameManager.instance.amountSprintUpgraded).ToString() + " / 25";
+        XPExtTxt.text = "Upgrade Bonus XP earned on Extraction " + gameManager.instance.amountXPModExtUpgraded.ToString() + " / 5";
+        XPDeadTxt.text = "Upgrade amount of XP saved upon death " + gameManager.instance.amountXPModDeadUpgraded.ToString() + " / 3";
         hasExtracted.text = "Player Extracted:\t\t\t" + gameManager.instance.shopSystem.hasExtracted.ToString();
         XpEarned.text = "XP Earned on Mission:\t\t\t" + gameManager.instance.shopSystem.XPPotential.ToString();
         if (gameManager.instance.shopSystem.hasExtracted && gameManager.instance.shopSystem.alphaKilled)
@@ -76,9 +71,9 @@ public class buttonFunctions : MonoBehaviour
 
     public void XPShopXPModExtraction(int cost)
     {
-        if(amountXPModExtUpgraded <= 5 && gameManager.instance.shopSystem.skillPointAmount >= cost)
+        if(gameManager.instance.amountXPModExtUpgraded <= 5 && gameManager.instance.shopSystem.skillPointAmount >= cost)
         {
-            amountXPModExtUpgraded++;
+            gameManager.instance.amountXPModExtUpgraded++;
             gameManager.instance.shopSystem.skillPointAmount -= cost;
             gameManager.instance.shopSystem.UpdatingExtractionXPModifier();
         }
@@ -86,9 +81,9 @@ public class buttonFunctions : MonoBehaviour
 
     public void XPShopXPModDeath(int cost)
     {
-        if(amountXPModDeadUpgraded <= 3 && gameManager.instance.shopSystem.skillPointAmount >= cost)
+        if(gameManager.instance.amountXPModDeadUpgraded <= 3 && gameManager.instance.shopSystem.skillPointAmount >= cost)
         {
-            amountXPModDeadUpgraded++;
+            gameManager.instance.amountXPModDeadUpgraded++;
             gameManager.instance.shopSystem.skillPointAmount -= cost;
             gameManager.instance.shopSystem.UpdatingDeathXPModifier();
         }
@@ -96,42 +91,24 @@ public class buttonFunctions : MonoBehaviour
 
     public void XPShopSprint(int cost)
     {
-        if(amountSprintUpgraded <= 5 && gameManager.instance.shopSystem.skillPointAmount >= cost)
+        if(gameManager.instance.amountSprintUpgraded <= 25 && gameManager.instance.shopSystem.skillPointAmount >= cost)
         {
-            amountSprintUpgraded++;
+            gameManager.instance.amountSprintUpgraded++;
             gameManager.instance.shopSystem.skillPointAmount -= cost;
             gameManager.instance.shopSystem.SprintUpgrade();
         }
-        if(amountSprintUpgraded == 5 && gameManager.instance.shopSystem.currentLevel >= ((SprintResetAmount + 1) * amountSprintUpgraded)
-            && SprintResetAmount <= 5)
-        {
-            SprintResetAmount++;
-            amountSprintUpgraded = 0;
-        }
-        else
-        {
-            isSprintLocked = true;
-        }
+        
     }
 
     public void XPShopHP(int cost)
     {
-        if(amountHPUpgraded <= 5 && gameManager.instance.shopSystem.skillPointAmount >= cost)
+        if(gameManager.instance.amountHPUpgraded <= 25 && gameManager.instance.shopSystem.skillPointAmount >= cost)
         {
-            amountHPUpgraded++;
+            gameManager.instance.amountHPUpgraded++;
             gameManager.instance.shopSystem.skillPointAmount -= cost;
             gameManager.instance.shopSystem.HealthUpgrade();
         }
-        if(amountHPUpgraded == 5 && gameManager.instance.shopSystem.currentLevel >= ((HPResetAmount + 1) * amountHPUpgraded)
-            && HPResetAmount <= 5)
-        {
-            HPResetAmount++;
-            amountHPUpgraded = 0;
-        }
-        else
-        {
-            isHPLocked = true;
-        }
+        
     }
 
     public void BuyShop(int cost)

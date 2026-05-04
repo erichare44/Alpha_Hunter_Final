@@ -377,7 +377,7 @@ public class ThirdPersonMotor : MonoBehaviour
 
         bool automatic = weapon.weaponData.isAutomatic 
             ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
-        Ray ray = aimCamera.ScreenPointToRay(new Vector3(0.5f, 0.5f, 05f));
+        Ray ray = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         Vector3 targetPoint;
 
         if (Physics.Raycast(ray, out RaycastHit hit, weapon.weaponData.range))

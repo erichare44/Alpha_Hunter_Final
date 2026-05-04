@@ -66,6 +66,11 @@ public class gameManager : MonoBehaviour
     bool needsWin = false;
     bool needsDeath = false;
     public int talkedNPCCount;
+    public int amountSprintUpgraded;
+    public int amountHPUpgraded;
+    public int amountXPModDeadUpgraded;
+    public int amountXPModExtUpgraded;
+
 
     [SerializeField] GameObject hubInventoryChest;
     [SerializeField] GameObject carObject;
@@ -179,8 +184,8 @@ public class gameManager : MonoBehaviour
         {
             currentObjective = UIObjective.GetComponentInChildren<TMP_Text>();
         }
-        needsDeath = false;
-        needsWin = false;
+        //needsDeath = false;
+        //needsWin = false;
         //scene UI stuff
         //XPUI = GameObject.FindWithTag("XPUI");
         //BountyBoardUI = GameObject.FindWithTag("Bounty Board");
@@ -215,7 +220,7 @@ public class gameManager : MonoBehaviour
     private void Update()
     {
         PlayerMenuControls();
-        if (needsWin) { OpenWinExtraction(); }
+        if (needsWin) { OpenWinExtraction(); Debug.Log("Bool isWorking"); }
         if (needsDeath) { OpenDeathScreen(); }
         if (moneyCounter != null && shopSystem != null)
         { moneyCounter.text = "Current Money: " + shopSystem.currentMoney.ToString(); }
@@ -386,6 +391,7 @@ public class gameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("HUB Area");
+        talkedNPCCount = 0;
         needsDeath = true;
     }
 
@@ -401,7 +407,9 @@ public class gameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene("HUB Area");
+        talkedNPCCount = 0;
         shopSystem.hasExtracted = true;
+        Debug.Log("Won't update Bool");
         needsWin = true;
     }
     public bool TestBuy(int cost)
@@ -415,7 +423,7 @@ public class gameManager : MonoBehaviour
 
     void OpenWinExtraction()
     {
-        needsWin = false;
+        Debug.Log("Win Screen Called");
         StatePause();
         activeMenuType = MenuType.Win;
         menuActive = AlphaWinScreen;
@@ -444,8 +452,6 @@ public class gameManager : MonoBehaviour
 
     public void OpenDeathScreen()
     {
-        needsDeath = false;
-
         StatePause();
         activeMenuType = MenuType.Lose;
         menuActive = DeathScreen;
@@ -462,5 +468,6 @@ public class gameManager : MonoBehaviour
     public void BackToHUB()
     {
         loadLevel("HUB Area");
+        talkedNPCCount = 0;
     }
 }
