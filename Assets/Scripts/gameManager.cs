@@ -140,6 +140,7 @@ public class gameManager : MonoBehaviour
         User = GameObject.FindWithTag("Player");
             if (User != null)
         {
+            player = User.transform;
             playerScript = User.GetComponent<ThirdPersonMotor>();
             shopSystem = User.GetComponent<XPSystem>();
             healthScript = User.GetComponent<PlayerHealth>();

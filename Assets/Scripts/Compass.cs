@@ -1,6 +1,7 @@
-using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class CompassPOI
@@ -10,7 +11,7 @@ public class CompassPOI
     public RectTransform uiMarker;
 
     [Header("Glow Effect")]
-    public bool CompassGlow;
+    public bool causesCompassGlow;
     public float glowDist;
 }
 
@@ -28,30 +29,52 @@ public class Compass : MonoBehaviour
     [SerializeField] private Color glowCompassColor;
 
     [Header("POI Tracking")]
-    [SerializeField] private CompassPOI[] poiTargets;
+    [SerializeField] private string poiTag = "POI";
+    [SerializeField] private float compassHalfWidth;
 
+    private List<CompassPOI> poiTargets = new List<CompassPOI>();
     private Transform player;
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject playerObject = GameObject.FindWithTag("Player");
-
-        if (playerObject != null)
-        {
-            player = playerObject.transform;
-        }
+        GetPlayer();
+        FindAllPOIs();
     }
 
     // Update is called once per frame
     void Update()
     {
+        GetPlayer();
+
         if (player == null)
             return;
 
         updateCompass();
-        updatePOI();
-        updateGlow();
+        updatePOIMarkers();
+        updateCompassGlow();
+    }
+    void GetPlayer()
+    {
+        if (gameManager.instance != null)
+        {
+            player = gameManager.instance.player;
+        }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GetPlayer();
+        FindAllPOIs();
     }
 
     void updateCompass()
@@ -64,43 +87,69 @@ public class Compass : MonoBehaviour
 
         compassStrip.anchoredPosition = new Vector2(-xPos, 0f);
     }
-
-    void updatePOI()
+    void FindAllPOIs()
     {
-        float compassHalfWidth = 400f;
+        poiTargets.Clear();
 
+        GameObject[] pois = GameObject.FindGameObjectsWithTag(poiTag);
+
+        foreach (GameObject obj in pois)
+        {
+            CompassPOI poi = new CompassPOI();
+            poi.worldTarget = obj.transform;
+
+            Transform marker = transform.Find(obj.name + "Marker");
+
+            if (marker != null)
+            {
+                poi.uiMarker = marker.GetComponent<RectTransform>();
+            }
+
+            poi.causesCompassGlow = true;
+
+            poiTargets.Add(poi);
+        }
+    }
+
+    void updatePOIMarkers()
+    {
         foreach (CompassPOI poi in poiTargets)
         {
-            if (poi.worldTarget == null)
-                continue;
-            if (poi.uiMarker == null)
+            if (poi.worldTarget == null || poi.uiMarker == null)
                 continue;
 
-            Vector3 directionToTarget = poi.worldTarget.position - player.position;
-            directionToTarget.y = 0f;
-            float angleToTarget = Vector3.SignedAngle(player.forward, directionToTarget, Vector3.up);
-            float markerX = (angleToTarget / 180f) * compassHalfWidth;
+            Vector3 direction = poi.worldTarget.position - player.position;
+            direction.y = 0f;
+
+            float angle = Vector3.SignedAngle(player.forward, direction, Vector3.up);
+
+            float markerX = (angle / 180f) * compassHalfWidth;
+
             poi.uiMarker.anchoredPosition = new Vector2(markerX, 0f);
         }
     }
 
-    void updateGlow()
+    void updateCompassGlow()
     {
         if (compassBarImage == null)
             return;
 
-        float strongestGlow = 0f;   
+        float strongestGlow = 0f;
 
-        foreach(CompassPOI poi in poiTargets)
+        foreach (CompassPOI poi in poiTargets)
         {
-            if (poi.worldTarget == null || !poi.CompassGlow)
+            if (poi.worldTarget == null || !poi.causesCompassGlow)
                 continue;
-            float distance = Vector3.Distance(player.position, poi.worldTarget.position);
-            float glowStrength = Mathf.Clamp01(1f - (distance / poi.glowDist));
-            if (glowStrength > strongestGlow)
-            {
-                strongestGlow = glowStrength;
-            }
+
+            float distance = Vector3.Distance(
+                player.position,
+                poi.worldTarget.position
+            );
+
+            float glow = Mathf.Clamp01(1f - (distance / poi.glowDist));
+
+            if (glow > strongestGlow)
+                strongestGlow = glow;
         }
         compassBarImage.color = Color.Lerp(baseCompassColor, glowCompassColor, strongestGlow);
     }

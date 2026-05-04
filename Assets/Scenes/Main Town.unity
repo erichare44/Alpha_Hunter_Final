@@ -933,8 +933,8 @@ GameObject:
   m_Component:
   - component: {fileID: 11444219}
   m_Layer: 0
-  m_Name: Townhall Location
-  m_TagString: Untagged
+  m_Name: Townhall
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21695,8 +21695,8 @@ GameObject:
   m_Component:
   - component: {fileID: 216243410}
   m_Layer: 0
-  m_Name: Police Station Location
-  m_TagString: Untagged
+  m_Name: PoliceStation
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36079,8 +36079,8 @@ GameObject:
   m_Component:
   - component: {fileID: 356885715}
   m_Layer: 0
-  m_Name: Farmhouse Location
-  m_TagString: Untagged
+  m_Name: Farmhouse
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44399,6 +44399,10 @@ PrefabInstance:
     - target: {fileID: 5557327951299580288, guid: f0ac6fb9ada49f24683e3eca20786103, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557327951299580288, guid: f0ac6fb9ada49f24683e3eca20786103, type: 3}
+      propertyPath: m_TagString
+      value: POI
       objectReference: {fileID: 0}
     - target: {fileID: 5557327951299580288, guid: f0ac6fb9ada49f24683e3eca20786103, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -68913,6 +68917,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 186757882122740016, guid: bcc8732b8b44622449c23934f89e68c0, type: 3}
+      propertyPath: m_TagString
+      value: POI
+      objectReference: {fileID: 0}
+    - target: {fileID: 186757882122740016, guid: bcc8732b8b44622449c23934f89e68c0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -92567,8 +92575,8 @@ GameObject:
   m_Component:
   - component: {fileID: 884530593}
   m_Layer: 0
-  m_Name: Local Bar Location
-  m_TagString: Untagged
+  m_Name: LocalBar
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108252,8 +108260,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1023372650}
   m_Layer: 0
-  m_Name: Cabin Location
-  m_TagString: Untagged
+  m_Name: Cabin
+  m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128098,6 +128106,10 @@ PrefabInstance:
     - target: {fileID: 4552685038025500937, guid: 2a3e1e176c8dcfd4db59e20030b74013, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552685038025500937, guid: 2a3e1e176c8dcfd4db59e20030b74013, type: 3}
+      propertyPath: m_TagString
+      value: POI
       objectReference: {fileID: 0}
     - target: {fileID: 4552685038025500937, guid: 2a3e1e176c8dcfd4db59e20030b74013, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -169274,10 +169286,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5920945
+  m_Height: 1.7808002
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &1673484222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201663,6 +201675,10 @@ PrefabInstance:
     - target: {fileID: 6993270559495516286, guid: 314b13a2c4f89c74299eabc2a4c725c7, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993270559495516286, guid: 314b13a2c4f89c74299eabc2a4c725c7, type: 3}
+      propertyPath: m_TagString
+      value: POI
       objectReference: {fileID: 0}
     - target: {fileID: 6993270559495516286, guid: 314b13a2c4f89c74299eabc2a4c725c7, type: 3}
       propertyPath: m_StaticEditorFlags
