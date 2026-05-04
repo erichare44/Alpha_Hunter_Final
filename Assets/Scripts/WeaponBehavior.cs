@@ -49,7 +49,11 @@ public class WeaponBehaviour : MonoBehaviour
             return;
 
         Vector3 direction = (targetPoint - muzzlePoint.position).normalized;
-      
+        Vector3 camForward = Camera.main.transform.forward;
+        if(Vector3.Dot(direction,camForward) < 0.5f)
+        {
+            direction = camForward;
+        }
 
         if (audioSource != null && fireClip != null)
         {

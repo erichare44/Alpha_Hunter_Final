@@ -412,7 +412,6 @@ public class gameManager : MonoBehaviour
 
     void OpenWinExtraction()
     {
-        //needsWin = false;
         Debug.Log("Win Screen Called");
         StatePause();
         activeMenuType = MenuType.Win;
@@ -442,8 +441,6 @@ public class gameManager : MonoBehaviour
 
     public void OpenDeathScreen()
     {
-        needsDeath = false;
-
         StatePause();
         activeMenuType = MenuType.Lose;
         menuActive = DeathScreen;
