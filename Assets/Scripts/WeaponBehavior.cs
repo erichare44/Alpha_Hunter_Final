@@ -13,7 +13,7 @@ public class WeaponBehaviour : MonoBehaviour
 
     public void UseWeapon(Vector3 targetPoint)
     {
-        
+       
         if (weaponData == null)
             return;
 
@@ -44,21 +44,12 @@ public class WeaponBehaviour : MonoBehaviour
 
     private void FireBullet(Vector3 targetPoint)
     {
-        
-   
+       
         if (weaponData.projectilePrefab == null || muzzlePoint == null)
             return;
 
         Vector3 direction = (targetPoint - muzzlePoint.position).normalized;
-
-        Vector3 camForward = Camera.main.transform.forward;
-
-        // Ensure it never flips or locks to wrong point
-        if (Vector3.Dot(direction, camForward) < 0f)
-        {
-            direction = camForward;
-        }
-
+      
 
         if (audioSource != null && fireClip != null)
         {
@@ -97,7 +88,7 @@ public class WeaponBehaviour : MonoBehaviour
             cam.TriggerShake(0.1f, 0.2f);
         }
 
-      
+
 
     }
 

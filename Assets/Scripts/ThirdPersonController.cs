@@ -26,7 +26,7 @@ public class ThirdPersonMotor : MonoBehaviour
     [Header("Dodge")]
     [SerializeField] private float dodgeSpeed = 8f;
     [SerializeField] private float dodgeDuration = 0.3f;
-  
+    [SerializeField] private float dodgeCooldown = 1f;
     private bool isDodging;
     private bool isInvincible;
     private float invincibilityTimer;
@@ -343,16 +343,16 @@ public class ThirdPersonMotor : MonoBehaviour
 
     private void HandleShoot()
     {
-        if (!Input.GetKeyDown(shootKey))
-        {
-            return;
-        }
 
         if (!isAiming)
         {
             return;
         }
 
+        if (!Input.GetKeyDown(shootKey))
+        {
+            return;
+        }
 
         if (aimCamera == null || weaponManager == null)
         {
@@ -373,22 +373,17 @@ public class ThirdPersonMotor : MonoBehaviour
 
         bool automatic = weapon.weaponData.isAutomatic 
             ? Input.GetKey(KeyCode.Mouse0) : Input.GetKeyDown(KeyCode.Mouse0);
-
-        Ray ray = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
-
+        Ray ray = aimCamera.ScreenPointToRay(new Vector3(0.5f, 0.5f, 05f));
         Vector3 targetPoint;
 
         if (Physics.Raycast(ray, out RaycastHit hit, weapon.weaponData.range))
         {
-            Debug.Log("Ray hit: " + hit.collider.name);
             targetPoint = hit.point;
         }
         else
         {
             targetPoint = ray.origin + ray.direction * weapon.weaponData.range;
         }
-
         weapon.UseWeapon(targetPoint);
     }
 
