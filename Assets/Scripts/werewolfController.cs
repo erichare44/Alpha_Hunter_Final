@@ -43,6 +43,14 @@ public class werewolfController : monsterAI
         // safety
         if (isDead || data == null || player == null) return;
 
+        if (agent.isActiveAndEnabled && agent.isOnNavMesh)
+        {
+            if (agent.pathStatus == NavMeshPathStatus.PathPartial || agent.pathStatus == NavMeshPathStatus.PathInvalid)
+            {
+                agent.ResetPath(); 
+            }
+        }
+
         stateTimer += Time.deltaTime;
         
         //patrol zone if not active
@@ -250,8 +258,11 @@ public class werewolfController : monsterAI
     
     protected override void HandlePatrol()
     {
+        if (!agent.isActiveAndEnabled || !agent.isOnNavMesh) return;
+
         agent.speed = data.runSpeed;
-        if (agent.remainingDistance < 1f)
+
+        if (!agent.pathPending && agent.remainingDistance < 1f)
         {
             patrolTarget = monsterAI.GetRandomNavMeshPos(myZoneCollider);
             agent.SetDestination(patrolTarget);
@@ -277,10 +288,14 @@ public class werewolfController : monsterAI
        
         hasDealtDamage = false;
         //dont have lazy bad guys
-        if (agent.isActiveAndEnabled)
+        if (agent.isActiveAndEnabled && agent.isActiveAndEnabled)
         {
             agent.isStopped = false;
-            agent.ResetPath();
+            if(newState != WolfState.Charging)
+            {
+                agent.ResetPath();
+            }
+            
         }
                 
     }
