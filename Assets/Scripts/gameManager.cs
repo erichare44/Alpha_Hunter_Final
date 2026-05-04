@@ -55,6 +55,8 @@ public class gameManager : MonoBehaviour
     [Header("Moon State")]
     private bool isBloodMoon;
 
+    [Header("Gameplay Rules")]
+    public bool combatEnabled = true;
 
     // private values needed for menus
     float timeScaleOriginal;
@@ -111,7 +113,15 @@ public class gameManager : MonoBehaviour
         RefreshReferences();
         SpawnMoonSystem();
 
-        
+        if (scene.name == "HUB Area" || scene.name == "Main Town")
+        {
+            combatEnabled = false;
+        }
+        else
+        {
+            combatEnabled = true;
+        }
+
         if (playerScript != null && SpawnPos != null)
         {
             playerScript.SpawnPlayer();

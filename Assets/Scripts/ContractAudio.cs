@@ -22,14 +22,15 @@ public class ContractAudio : MonoBehaviour
 
     [Header("Settings")]
     public bool playOnlyOnce = true;
-
     private bool hasPlayed = false;
+    [Range(0f, 1f)] public float volume = 1f;
 
     private AudioSource audioSource;
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = volume;
     }
 
     private void OnTriggerEnter(Collider other)

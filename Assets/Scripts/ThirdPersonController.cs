@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(CharacterController))]
 public class ThirdPersonMotor : MonoBehaviour 
@@ -54,6 +55,12 @@ public class ThirdPersonMotor : MonoBehaviour
     [SerializeField] float jumpHeight = 5f;
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
 
+    [Header("Boundary Warning")]
+    [SerializeField] private TextMeshProUGUI warningText;
+    [SerializeField] private float warningDuration = 2f;
+
+    private float warningTimer;
+
     private CharacterController controller;
     private float verticalVelocity;
     //private float currentMoveX;
@@ -89,6 +96,11 @@ public class ThirdPersonMotor : MonoBehaviour
         if (gameManager.instance.SpawnPos != null)
         {
             SpawnPlayer(); 
+        }
+
+        if (warningText != null)
+        {
+            warningText.alpha = 0f;
         }
     }
 
@@ -142,6 +154,7 @@ public class ThirdPersonMotor : MonoBehaviour
             HandleMovement();
         }
         UpdateAnimator();
+        HandleWarningTimer();
     }
 
     private void ReadMovementInput()
@@ -219,7 +232,36 @@ public class ThirdPersonMotor : MonoBehaviour
                 }
             }
         }
-   
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Boundary"))
+        {
+            ShowWarning();
+        }
+    }
+
+    void ShowWarning()
+    {
+        if (warningText == null)
+            return;
+
+        warningText.alpha = 1f;
+        warningTimer = warningDuration;
+    }
+
+    void HandleWarningTimer()
+    {
+        if (warningTimer > 0f)
+        {
+            warningTimer -= Time.deltaTime;
+
+            if (warningTimer <= 0f && warningText != null)
+            {
+                warningText.alpha = 0f;
+            }
+        }
     }
 
     private void StartDodge()
@@ -301,6 +343,10 @@ public class ThirdPersonMotor : MonoBehaviour
 
     private void HandleShoot()
     {
+        if (gameManager.instance != null && !gameManager.instance.combatEnabled)
+        {
+            return;
+        }
 
         if (!isAiming)
         {

@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCameraController
   target: {fileID: 8087910819410526431}
-  mouseSensitivity: 50
+  mouseSensitivity: 600
   shoulderOffset: 0.65
   lookAtHeight: -0.35
   minPitch: -35
@@ -3724,7 +3724,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7514126451723477964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f05ce62e94a7ced448e5d9b2c3f7fce6, type: 3}
   m_Name: 
@@ -3766,7 +3766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c4b2e73724c4d4aa6c4b46cca9ec10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonMotor
-  shootincComponentRef: {fileID: 6207121360366282251}
   cameraController: {fileID: 739657144552744660}
   animator: {fileID: 7406112776654885524}
   moveSpeed: 3
@@ -3793,6 +3792,8 @@ MonoBehaviour:
   flashlightKey: 102
   jumpHeight: 2
   jumpKey: 32
+  warningText: {fileID: 0}
+  warningDuration: 3
 --- !u!114 &3479397631329566851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4412,6 +4413,10 @@ PrefabInstance:
     - target: {fileID: 5654641543077781867, guid: 0cb9a9686314f6e4986536f962ef2c98, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654641543077781867, guid: 0cb9a9686314f6e4986536f962ef2c98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8411885119081229786, guid: 0cb9a9686314f6e4986536f962ef2c98, type: 3}
       propertyPath: m_LocalPosition.x
