@@ -1983,7 +1983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3479397631329566851, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
       propertyPath: skillPointAmount
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5602958686959627974, guid: bbea58b82a2701e4d94d6591d4db6c73, type: 3}
       propertyPath: m_LocalPosition.x
