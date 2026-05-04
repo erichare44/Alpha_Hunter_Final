@@ -126,16 +126,21 @@ public abstract class monsterAI : MonoBehaviour, IDamage
 
         Bounds b = zoneCollider.bounds;
 
-        //pick random spot in box
-        Vector3 randomPos = new Vector3(Random.Range(b.min.x, b.max.x), b.min.y, Random.Range(b.min.z, b.max.z));
+        int obstacleMask = LayerMask.GetMask("Default");
 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPos, out hit, 5f, NavMesh.AllAreas))
+        for (int i = 0; i < 10; i++)
         {
-            return hit.position;
-        }
+            Vector3 randomPos = new Vector3(Random.Range(b.min.x, b.max.x), b.min.y, Random.Range(b.min.z, b.max.z));
 
-        return zoneCollider.transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPos, out hit, 5f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+        NavMeshHit fallbackHit;
+        NavMesh.SamplePosition(zoneCollider.transform.position, out fallbackHit, 10f, NavMesh.AllAreas);
+        return fallbackHit.position;
     }
     public virtual void PlayAlertSound()
     {
